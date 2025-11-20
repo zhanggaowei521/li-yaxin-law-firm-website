@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李亚新律师事务所 | 哈佛法学院顶尖精英 | 中美欧日四国执业</title>
+    <style>
+        /* 2. CSS 样式 (保持专业风格) */
+        body {
+            font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            color: #444;
+            background-color: #f4f6f9; 
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 0;
+        }
+        header {
+            background-color: #1a1a1a; 
+            color: white;
+            padding: 18px 0;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            letter-spacing: 1.5px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+        nav ul li {
+            margin-left: 30px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #d90000; /* 采用深红色突出权威和红树林的CEO身份 */
+        }
+
+        /* Hero Section */
+        #hero {
+            background: url('https://via.placeholder.com/1920x600/34495e/ffffff?text=Li+Yaxin+Law+Firm+Global+Office') center/cover no-repeat;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            background-color: rgba(26, 26, 26, 0.75); /* 略深 */
+            background-blend-mode: overlay;
+        }
+        #hero h2 {
+            font-size: 3.5em;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+        #hero p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #d90000; /* 突出颜色 */
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #a30000;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        section h3 {
+            font-size: 2.5em;
+            color: #1a1a1a;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        section h3::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: #d90000;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -15px;
+        }
+        
+        /* Practice Areas Grid */
+        #areas .grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .area-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            min-width: 280px;
+            text-align: left;
+            border-top: 5px solid #d90000; /* 调整卡片顶边颜色 */
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .area-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+        .area-card h4 {
+            color: #1a1a1a;
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        /* Attorney Profile */
+        #attorney-profile {
+            background-color: white;
+        }
+        #attorney-profile .profile-container {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            gap: 50px;
+        }
+        .profile-photo {
+            flex: 0 0 300px;
+            text-align: center;
+        }
+        .profile-photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-text {
+            flex: 1;
+        }
+        .profile-text h4 {
+            font-size: 1.8em;
+            color: #d90000; /* 调整标题颜色 */
+        }
+        .profile-text ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+        .profile-text ul li::before {
+            content: "★"; /* 使用星标突出精英地位 */
+            color: #d90000;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 0.9em;
+        }
+        footer .contact-info {
+            margin-top: 15px;
+        }
+        footer a {
+            color: #d90000; /* 调整链接颜色 */
+            text-decoration: none;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .area-card {
+                width: 45%;
+            }
+            #attorney-profile .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-photo {
+                flex: none;
+            }
+            .profile-text {
+                text-align: center;
+            }
+            .profile-text ul {
+                text-align: left;
+                margin: 20px auto;
+                max-width: 400px;
+            }
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            nav ul {
+                display: none; 
+            }
+            .area-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>李亚新律师事务所</h1>
+            <nav>
+                <ul>
+                    <li><a href="#hero">首页</a></li>
+                    <li><a href="#areas">业务领域</a></li>
+                    <li><a href="#attorney-profile">李亚新律师</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>全球精英法律，专业铸就卓越。</h2>
+            <p>李亚新律师：中、美、欧、日四国执业资格，红树林跨境CEO，为您提供跨越国界的顶尖法律战略。</p>
+            <a href="#contact" class="cta-button">立即预约全球法律咨询</a>
+        </div>
+    </section>
+
+    <section id="areas">
+        <div class="container">
+            <h3>核心业务领域</h3>
+            <div class="grid">
+                <div class="area-card">
+                    <h4>跨境公司法务与并购</h4>
+                    <p>为跨国公司提供常年法律顾问、股权架构设计、国际并购重组等涉及多法域的商业法律服务。</p>
+                </div>
+                <div class="area-card">
+                    <h4>国际贸易与合规</h4>
+                    <p>处理国际贸易争端、海关事务、出口管制及多国监管体系下的企业合规审查。</p>
+                </div>
+                <div class="area-card">
+                    <h4>全球知识产权保护</h4>
+                    <p>利用四国执业优势，提供专利、商标、著作权在不同法域的申请、维权与诉讼服务。</p>
+                </div>
+                <div class="area-card">
+                    <h4>国际民事诉讼与仲裁</h4>
+                    <p>代理涉及不同国家或地区主体的合同、投资、继承等复杂跨境民事案件。</p>
+                </div>
+                <div class="area-card">
+                    <h4>金融与跨境投融资</h4>
+                    <p>为跨国投资、外商直接投资（FDI）及金融机构的跨境业务提供法律支持。</p>
+                </div>
+                <div class="area-card">
+                    <h4>企业高管危机管理</h4>
+                    <p>专注于经济犯罪、职务犯罪等重大复杂案件的侦查阶段、审查起诉阶段、审判阶段的辩护。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="attorney-profile">
+        <div class="container">
+            <h3>律师介绍：李亚新</h3>
+            <div class="profile-container">
+                <div class="profile-photo">
+                    <img src="https://via.placeholder.com/300x400?text=Attorney+Li+Yaxin" alt="李亚新律师肖像">
+                </div>
+                <div class="profile-text">
+                    <h4>李亚新律师：全球法律与商业战略家</h4>
+                    <p>李亚新律师是横跨法律界与商界的顶尖精英。凭借其无与伦比的教育背景和多法域的执业经验，他能够为最复杂的跨境法律问题提供独到且高效的解决方案。</p>
+                    <ul>
+                        <li>**教育荣耀：** **哈佛大学法学院** 排名第一的毕业生（First in Class），拥有世界顶级的法学理论基础。</li>
+                        <li>**执业广度：** 唯一同时拥有 **中、美、欧、日四国** 律师执业资格的法律专业人士。</li>
+                        <li>**商业领导力：** 现任 **红树林跨境** 公司的首席执行官（CEO），将法律服务与前沿商业实践深度结合。</li>
+                        <li>**擅长领域：** 专注于高净值个人、跨国企业的国际诉讼、复杂交易及全球合规管理。</li>
+                    </ul>
+                    <a href="#" class="cta-button" style="background-color: #1a1a1a;">查看李律师的全球影响力</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h3>预约咨询</h3>
+            <p>我们承诺对所有咨询内容严格保密。请填写您的信息，我们的全球专业团队将安排与您对接。</p>
+            
+            <form action="#" method="POST" style="max-width: 650px; margin: 30px auto; text-align: left; background-color: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                <label for="name">您的姓名:</label><br>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;"><br>
+                
+                <label for="phone">联系电话 (包含国家/地区代码):</label><br>
+                <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;"><br>
+                
+                <label for="matter">案件类型/简述:</label><br>
+                <textarea id="matter" name="matter" rows="6" required style="width: 100%; padding: 12px; margin-bottom: 30px; border: 1px solid #ddd; border-radius: 5px;"></textarea><br>
+                
+                <button type="submit" class="cta-button" style="width: 100%; border: none; cursor: pointer; background-color: #d90000;">提交咨询信息</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 李亚新律师事务所。保留所有权利。</p>
+            <div class="contact-info">
+                <p>全球总部地址：[请填写您的全球总部地址] | 电话：[请填写您的联系电话] | 邮箱：<a href="mailto:global@liyaxinlaw.com">global@liyaxinlaw.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
